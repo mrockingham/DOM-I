@@ -47,7 +47,24 @@ let navItems = document.querySelectorAll('nav a')
 for (let i = 0; i < navItems.length; i++){
   let navContents = Object.values(siteContent .nav)
   navItems[i].textContent = navContents[i]
+  navItems[i].style.color = 'green'
 }
+
+const navNew1 = document.querySelector('nav')
+
+const subNav = document.createElement('a')
+subNav.textContent = 'last'
+navNew1.appendChild(subNav)
+
+const preNav = document.createElement('a')
+preNav.textContent = 'first'
+navNew1.prepend(preNav)
+
+
+
+// let greenNav =document.querySelectorAll('a')
+// greenNav.style.color = 'green'
+
       //middle section
 const h1s = document.querySelector('.cta h1')
  let h1sText = siteContent['cta']['h1']
@@ -63,7 +80,91 @@ button.textContent = buttonText
       //Body Section
           //Features
 
-let features = document.querySelector          
+
+let fTitlesTop = document.querySelectorAll('h4')[0]
+let fText = siteContent["main-content"]["features-h4"]
+fTitlesTop.textContent = fText
+
+let fpTitlesTop = document.querySelectorAll('p')[0]
+let fpText = siteContent["main-content"]["features-content"]
+fpTitlesTop.textContent = fpText
+
+      //About
+let aTitlesTop = document.querySelectorAll('h4')[1]
+let aText = siteContent["main-content"]["about-h4"]
+aTitlesTop.textContent = aText
+
+let apTitlesTop = document.querySelectorAll('p')[1]
+let apText = siteContent["main-content"]["about-content"]
+apTitlesTop.textContent = apText
+
+//       //Middle img
+
+ let bpg = document.getElementById('middle-img');
+ bpg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+       //Serivces
+
+let sTitlesBottom = document.querySelectorAll('h4')[2]
+let sText = siteContent["main-content"]["services-h4"]
+sTitlesBottom.textContent = sText
+
+let spTitlesBottom = document.querySelectorAll('p')[2]
+let spText = siteContent["main-content"]["services-content"]
+spTitlesBottom.textContent = spText
+
+//       //Product
+
+let pTitlesBottom = document.querySelectorAll('h4')[3]
+let pText = siteContent["main-content"]["product-h4"]
+pTitlesBottom.textContent = pText
+
+let ppTitlesBottom = document.querySelectorAll('p')[3]
+let ppText = siteContent["main-content"]["product-content"]
+ppTitlesBottom.textContent = ppText
+
+
+//       //Vision
+
+let vTitlesBottom = document.querySelectorAll('h4')[4]
+let vText = siteContent["main-content"]["vision-h4"]
+vTitlesBottom.textContent = vText
+
+let vpTitlesBottom = document.querySelectorAll('p')[4]
+let vpText = siteContent["main-content"]["vision-content"]
+vpTitlesBottom.textContent = vpText
+
+          // const h4s = document.querySelectorAll('h4 .text-content')          
+// for (let i = 0; i < h4s.length; i++)
+// const contents = 
+// h4s[i].textContent = contents
+
+
+
+      //Contact
+
+let contact = document.querySelectorAll('h4')[5]
+let contactText = siteContent["contact"]["contact-h4"]
+contact.textContent = contactText
+
+let address = document.querySelectorAll('p')[5]
+let addressText = siteContent['contact']["address"]
+address.textContent = addressText
+
+let phone = document.querySelectorAll('p')[6]
+let phoneText = siteContent['contact']["phone"]
+phone.textContent = phoneText
+
+let email = document.querySelectorAll('p')[7]
+let emailText = siteContent['contact']["email"]
+email.textContent = emailText
+
+
+
+      //copyright
+
+      let copyright = document.querySelectorAll('p')[8]
+      let copyrightText = siteContent['footer']["copyright"]
+      copyright.textContent = copyrightText
   
 
 
